@@ -1,6 +1,9 @@
 version: '3'
 services:
   web:
-    build: .
+    build: ./flask
     ports:
      - "5000:5000"
+    volumes:
+     - .:/flask
+    tty: true
